@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "lint:check": "prettier --check .",
-    "lint:fix": "prettier --write ."
+    "lint:fix": "prettier --write .",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "author": "",
   "license": "MIT",
@@ -16,6 +20,10 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "jest": "^29.6.2",
     "prettier": "^3.3.3"
+  },
+  "engines": {
+    "node": "18.14.2"
   }
 }

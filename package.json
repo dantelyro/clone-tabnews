@@ -4,7 +4,9 @@
   "description": "implementação do tabnews do curso.dev",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run services:up && next dev",
+    "services:up": "docker compose -f infra/compose.yml up -d",
+    "services:down": "docker compose -f infra/compose.yml down",
     "build": "next build",
     "start": "next start",
     "lint:check": "prettier --check .",

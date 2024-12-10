@@ -3,7 +3,6 @@ test("Get to api/v1/status should return 200", async () => {
 
   const responseBody = await response.json();
   const parsedDate = new Date(responseBody.updated_at).toISOString();
-  console.log(responseBody);
 
   const database = responseBody.dependencies.database;
   expect(response.status).toBe(200);

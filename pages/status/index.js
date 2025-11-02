@@ -37,8 +37,6 @@ function DatabaseStatus() {
 
   let databaseStatusInformation = "Carregando...";
 
-  console.log({ isLoading, data });
-
   if (!isLoading && data) {
     databaseStatusInformation = (
       <>

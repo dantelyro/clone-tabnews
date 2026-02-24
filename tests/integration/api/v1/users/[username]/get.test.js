@@ -24,7 +24,9 @@ describe("GET /api/v1/users/[username]", () => {
 
       expect(response1.status).toBe(201);
 
-      const response2 = await fetch("http://localhost:3000/api/v1/users/MesmoCase");
+      const response2 = await fetch(
+        "http://localhost:3000/api/v1/users/MesmoCase",
+      );
 
       expect(response2.status).toBe(200);
 
@@ -59,7 +61,9 @@ describe("GET /api/v1/users/[username]", () => {
 
       expect(response1.status).toBe(201);
 
-      const response2 = await fetch("http://localhost:3000/api/v1/users/casedifferent");
+      const response2 = await fetch(
+        "http://localhost:3000/api/v1/users/casedifferent",
+      );
 
       expect(response2.status).toBe(200);
 
@@ -80,7 +84,9 @@ describe("GET /api/v1/users/[username]", () => {
     });
 
     test("With Exact case match", async () => {
-      const response2 = await fetch("http://localhost:3000/api/v1/users/NonExistentUser");
+      const response2 = await fetch(
+        "http://localhost:3000/api/v1/users/NonExistentUser",
+      );
 
       expect(response2.status).toBe(404);
 

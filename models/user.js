@@ -84,7 +84,7 @@ async function create(userInputValues) {
 
 const user = {
   create,
-  findOneByUsername
+  findOneByUsername,
 };
 
 export default user;
